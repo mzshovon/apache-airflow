@@ -1,0 +1,11 @@
+services:
+  sleek-airflow:
+    image : sleek-airflow:latest
+    build:
+      context: ./
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8070:8080"
+
+    command : airflow standalone
